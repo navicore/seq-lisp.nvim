@@ -20,7 +20,7 @@ Neovim support for the [SeqLisp programming language](https://github.com/navicor
 ```lua
 {
   "navicore/seq-lisp.nvim",
-  ft = "seqlisp",
+  event = "BufReadPre *.slisp",
   opts = {},
 }
 ```
@@ -30,7 +30,7 @@ Neovim support for the [SeqLisp programming language](https://github.com/navicor
 ```lua
 {
   "navicore/seq-lisp.nvim",
-  ft = "seqlisp",
+  event = "BufReadPre *.slisp",
   opts = {
     -- Custom path to seqlisp-lsp (optional, defaults to "seqlisp-lsp")
     cmd = { "seqlisp-lsp" },
@@ -51,7 +51,7 @@ Neovim support for the [SeqLisp programming language](https://github.com/navicor
 If you prefer manual configuration:
 
 ```lua
-require("seqlisp-lsp").setup({})
+require("seq-lisp").setup({})
 ```
 
 ## File Extension

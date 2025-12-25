@@ -1,5 +1,5 @@
--- seqlisp-lsp.nvim
--- Neovim LSP configuration for the SeqLisp programming language
+-- seq-lisp.nvim
+-- Neovim plugin for the SeqLisp programming language
 
 local M = {}
 
