@@ -1,6 +1,5 @@
 " Vim syntax file
 " Language: SeqLisp
-" Maintainer: Ed Sweeney
 " Latest Revision: 2024
 
 if exists("b:current_syntax")

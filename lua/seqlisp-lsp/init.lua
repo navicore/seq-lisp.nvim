@@ -6,17 +6,15 @@ local M = {}
 M.setup = function(opts)
   opts = opts or {}
 
-  -- Register .seqlisp and .slisp filetypes
+  -- Register .slisp filetype
   vim.filetype.add({
     extension = {
-      seqlisp = "seqlisp",
       slisp = "seqlisp",
     },
   })
 
-  -- Default command - runs seqlisp with lsp.lisp
-  -- User should set cmd to point to their seqlisp installation
-  local cmd = opts.cmd or { "seqlisp", "lsp.lisp" }
+  -- Default command - assumes seqlisp-lsp is in PATH
+  local cmd = opts.cmd or { "seqlisp-lsp" }
 
   -- Set up LSP when opening seqlisp files
   vim.api.nvim_create_autocmd("FileType", {
@@ -26,7 +24,7 @@ M.setup = function(opts)
         name = "seqlisp-lsp",
         cmd = cmd,
         root_dir = vim.fs.dirname(
-          vim.fs.find({ ".git", "justfile", "lib" }, {
+          vim.fs.find({ ".git", "justfile" }, {
             upward = true,
             path = vim.fs.dirname(args.file),
           })[1]

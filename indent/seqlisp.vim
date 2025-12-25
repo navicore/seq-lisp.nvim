@@ -1,6 +1,5 @@
 " Vim indent file
 " Language: SeqLisp
-" Maintainer: Ed Sweeney
 
 if exists("b:did_indent")
   finish
