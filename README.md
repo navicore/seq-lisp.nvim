@@ -2,6 +2,10 @@
 
 Neovim support for the [SeqLisp programming language](https://github.com/navicore/seq-lisp).
 
+**Home Code Repository** is at [git.navicore.tech](https://git.navicore.tech/navicore/seq-lisp.nvim)
+
+**PRs and issues** welcome at the [GitHub mirror](https://github.com/navicore/seq-lisp.nvim)
+
 ## Features
 
 - **Syntax highlighting** - Keywords, builtins, strings, comments, s-expressions
